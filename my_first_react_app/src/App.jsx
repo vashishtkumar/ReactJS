@@ -1,14 +1,7 @@
 import './App.css'
-import Title from "./Title"
+import {Header,Title} from "./Title"   // here it is necessary you have to name through which you have exported
 
-function Header(){
-  return (
-    <>
-    <h2>Header section is there</h2>
-    <p>this is header section</p>
-    </>
-  )
-}
+
 function App() {
   
 
