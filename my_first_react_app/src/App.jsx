@@ -1,8 +1,6 @@
 import './App.css'
+import Title from "./Title"
 
-function Title(){
-  return <h1>Hello Vashist !. This is title</h1>
-}
 function Header(){
   return (
     <>
