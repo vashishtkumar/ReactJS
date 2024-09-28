@@ -5,7 +5,7 @@ export default function Product(props){
         <div className="Product">
         <h1>{props.title}</h1>
         <h3>{props.desc}</h3>
-        <p>{(props.price > 30000) ? "discount of 5 %":""}</p>
+        {props.price> 30000 ? <p>discount of {10/2} %</p>:<a href="#">click for discount</a>}
         </div>
     )
    
