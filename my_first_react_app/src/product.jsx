@@ -1,14 +1,21 @@
 import photo from "./assets/photo.jpg"
 import "./product.css"
 export default function Product(props){
-    let result=props.company.map((item)=>{
-        return <li>{item}</li>
-    })
+    
+    if(props.price > 30000){
     return (
         <div className="Product">
         <h1>{props.title}</h1>
         <h3>{props.desc}</h3>
-        <ul style={{listStyleType:"square"}}>{result}</ul>
+        <p>discount of 5%</p>
+        </div>
+    )}
+    else
+    return(
+    <div className="Product">
+        <h1>{props.title}</h1>
+        <h3>{props.desc}</h3>
+        <a href="#">click to get discount</a>
         </div>
     )
 }
