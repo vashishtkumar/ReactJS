@@ -4,8 +4,8 @@ function MulProduct(){
     let feautres=["cute " ,"loving ","nature lover"]
 return(
     <>
-    <Product title="Cute Girl" cuteness="100" feautres={feautres} feautres2={feautres2}/>
-    <Product title="Lovely Girl" cuteness={200} feautres={feautres} feautres2={feautres2}></Product>
+    <Product title="Cute Girl" cuteness="100" feautres={feautres} feautres2={{"angry":2, mood:"very good" }}/>
+    <Product title="Lovely Girl" cuteness={200} feautres={["cute " ,"loving ","nature lover", "Naughty"]} feautres2={feautres2}></Product>
     <Product title="inoccent girl" feautres={feautres} feautres2={feautres2}/>
     </>
 )
