@@ -1,12 +1,10 @@
 import Product from "./product";
-let feautres2={"angry":20, mood:"good" }
+
 function MulProduct(){
-    let feautres=["cute " ,"loving ","nature lover"]
+     let company=[<li>asus</li>,<li>dell</li>,<li>apple</li>,<li>msi</li>];
 return(
     <>
-    <Product title="Cute Girl" cuteness="100" feautres={feautres} feautres2={{"angry":2, mood:"very good" }}/>
-    <Product title="Lovely Girl" cuteness={200} feautres={["cute " ,"loving ","nature lover", "Naughty"]} feautres2={feautres2}></Product>
-    <Product title="inoccent girl" feautres={feautres} feautres2={feautres2}/>
+    <Product title="laptop" desc="A shop for sale and buy of various compny laptop" company={company}/>
     </>
 )
 }
