@@ -1,7 +1,7 @@
 import Product from "./product";
 
 function MulProduct(){
-     let company=[<li>asus</li>,<li>dell</li>,<li>apple</li>,<li>msi</li>];
+     let company=["asus","dell","apple"];
 return(
     <>
     <Product title="laptop" desc="A shop for sale and buy of various compny laptop" company={company}/>
