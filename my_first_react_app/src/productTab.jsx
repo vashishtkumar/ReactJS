@@ -5,7 +5,7 @@ return(
     <>
     <Product title="Cute Girl" cuteness="100"/>
     <Product title="Lovely Girl" cuteness={200}></Product>
-    <Product title="inoccent girl" cuteness="80"/>
+    <Product title="inoccent girl"/>
     </>
 )
 }
