@@ -1,12 +1,12 @@
 import Count from "../components/count"
 import './App.css'
+import LikedButton from "../components/Liked"
 
 function App() {
  
   return (
     <>
-      <h2>React State</h2>
-      <Count/>
+      <LikedButton/>
     </>
   )
 }
