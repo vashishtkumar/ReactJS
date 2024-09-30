@@ -7,9 +7,9 @@ function handleSubmit(event){
 export default function Form(){
     return(
         <>
-        <form onSubmit={handleSubmit}>
+        <form >
             <input type="text" placeholder="write your text" />
-            <input type="submit" value="submit"/>
+            <input type="submit" value="submit" onClick={handleSubmit}/>
         </form>
         </>
     )
