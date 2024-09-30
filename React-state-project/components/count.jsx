@@ -9,10 +9,10 @@ let [stateVariable,setStateVariable]=useState(0);
 
 // state for counter
 let [count,setCount]=useState(0);
-
+console.log(`count after rendering ${count}`);
 let increment=()=>{
 setCount(count+1);
-console.log(count);
+console.log(`inner count =${count}`);
 }
     
     return (
