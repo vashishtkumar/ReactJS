@@ -13,3 +13,5 @@ console.log(count);
         </>
     )
 } 
+
+// as count is not updating because component is not re-rendering
