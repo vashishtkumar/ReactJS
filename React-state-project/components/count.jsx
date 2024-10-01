@@ -2,16 +2,19 @@ import {useState} from "react";
 
 export default function Count(){
     
-let arr=useState(10);
-console.log(arr); // it will return an array exactly have two values
-
-let [stateVariable,setStateVariable]=useState(0);
-
 // state for counter
 let [count,setCount]=useState(0);
 console.log(`count after rendering ${count}`);
+
 let increment=()=>{
-setCount(count+1);
+
+    //setCount(count+1);
+    //setCount(count+1);
+setCount((currentValue)=>{  // call back in state function
+   return currentValue+1});  // return is must
+setCount((currentValue)=>{
+   return currentValue+1});  // return  is must
+
 console.log(`inner count =${count}`);
 }
     
