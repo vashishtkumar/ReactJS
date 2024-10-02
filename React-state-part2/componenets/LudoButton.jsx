@@ -2,22 +2,29 @@
 import { useState } from "react"
 export default function LudoButton(){
     
-const [blueMoves,setBlueMoves]=useState(0);
-const [yellowMoves,setYellowMoves]=useState(0);
-const [greenMoves,setGreenMoves]=useState(0);
-const [redMoves,setRedMoves]=useState(0);
+const [moves,setMoves]=useState({blue:0,yellow:0,red:0,green:0});
 
 function handleBlue(){
- setBlueMoves(blueMoves+1);
+    moves.blue=moves.blue+1;
+    console.log(`moves.blue = ${moves.blue}`);   
+ //setMoves(moves);   // as it will increament becuse only data is updated not the reference
+
+ setMoves({...moves});   // spread operator is used here that it will create copy
 }
+
 function handleYellow(){
-    setYellowMoves(yellowMoves+1);
+   setMoves({...moves,yellow:moves.yellow+1});
 }
    function handleGreen(){
-    setGreenMoves(greenMoves+1);
+    setMoves({...moves,green:moves.green+1});
 }
    function handleRed(){
-    setRedMoves(redMoves+1);
+
+    setMoves((prevVal)=>{
+        
+        return {...prevVal,red:prevVal.red+1};
+    }
+)
 }
 
 
@@ -26,13 +33,13 @@ function handleYellow(){
         <div>
             <p>Game Begins!</p>
             <div>
-                <h2>Blue Moves:{blueMoves}</h2>
+                <h2>Blue Moves:{moves.blue}</h2>
                 <button style={{backgroundColor:"blue" ,color:"black"}} onClick={handleBlue}>+1</button>
-                <h2>Yellow Moves:{yellowMoves}</h2>
+                <h2>Yellow Moves:{moves.yellow}</h2>
                 <button style={{backgroundColor:"yellow" ,color:"black"}}onClick={handleYellow}>+1</button>
-                <h2>Green Moves:{greenMoves}</h2>
+                <h2>Green Moves:{moves.green}</h2>
                 <button style={{backgroundColor:"green" ,color:"black"}}onClick={handleGreen}>+1</button>
-                <h2>Red Moves:{redMoves}</h2>
+                <h2>Red Moves:{moves.red}</h2>
                 <button style={{backgroundColor:"red" ,color:"black"}} onClick={handleRed}>+1</button>
             </div>
         </div>
